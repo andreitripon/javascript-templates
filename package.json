@@ -1,0 +1,36 @@
+{
+  "name": "javascript-templates",
+  "version": "1.0.0",
+  "description": "JQuery templates",
+  "main": "dist/js/javascript-templates.min.js",
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreitripon/javascript-templates"
+  },
+  "keywords": [
+    "js",
+    "jquery",
+    "templates"
+  ],
+  "author": "Tripon Andrei",
+  "license": "Apache License, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/andreitripon/javascript-templates/issues"
+  },
+  "homepage": "https://github.com/andreitripon/javascript-templates",
+  "listFiles": {
+    "js": [
+      "src/js/javascript-templates.js"
+    ]
+  },
+  "minDest": {
+    "js": "dist/js/"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-install": "^1.1.0",
+    "gulp-uglify": "~2.0.0"
+  }
+}

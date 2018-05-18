@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo - simple</title>
+</head>
+<body>
+    <ul id="target"></ul>
+
+    <script id="template" type="text/html">
+        <li>
+            <span data-render-content="index"></span>.
+            <b data-render-content="title"></b>
+            <a href="#" data-render-href="link" data-render-title="title">Read more... </a>
+        </li>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../dist/js/javascript-templates.min.js"></script>
+    <script>
+        var target = "#target";
+        var template = "#template";
+
+        var jsonData = [
+            {
+                'index' : 1,
+                'title' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                'link' : 'http://google.com'
+            },
+            {
+                'index' : 2,
+                'title' : 'In faucibus nisl in tristique tempor.',
+                'link' : 'http://google.com'
+            },
+            {
+                'index' : 3,
+                'title' : 'Fusce auctor orci id neque volutpat, a lobortis velit dignissim.',
+                'link' : 'http://google.com'
+            },
+            {
+                'index' : 4,
+                'title' : 'Nam convallis massa non eros rhoncus, in iaculis nisl sagittis.',
+                'link' : 'http://google.com'
+            },
+            {
+                'index' : 5,
+                'title' : 'Etiam vitae mi interdum, laoreet erat vel, pharetra est.',
+                'link' : 'http://google.com'
+            }
+        ];
+
+        for (var i = 0; i < jsonData.length; i++) {
+            new templateHtml(
+                template,
+                jsonData[i]
+            ).appendTo(target);
+        }
+    </script>
+</body>
+</html>
